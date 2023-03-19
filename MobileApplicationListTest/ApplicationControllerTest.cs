@@ -62,6 +62,7 @@ namespace MobileApplicationsList.Tests.Controllers
             // Act
             var result = await _controller.GetAllApplications();
 
+
             // Assert
             Assert.IsType<StatusCodeResult>(result.Result);
             Assert.Equal(500, ((StatusCodeResult)result.Result).StatusCode);
