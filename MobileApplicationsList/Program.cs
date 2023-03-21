@@ -18,7 +18,7 @@ builder.Services.AddScoped<IApplicationbaseRepository, ApplicationBaseRepository
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-        options.UseNpgsql("Server=5432;Port=5432;Database=mobileapplicationdata;User Id=postgres;Password=postgrespw;"));
+        options.UseNpgsql("Server=postgres;Port=5432;Database=mobileapplicationdata;User Id=postgres;Password=postgrespw;"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -33,5 +33,15 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<ApplicationDbContext>();
+    if (context.Database.GetPendingMigrations().Any())
+    {
+        context.Database.Migrate();
+    }
+}
 
 app.Run();

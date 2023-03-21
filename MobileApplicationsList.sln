@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileApplicationsList", "MobileApplicationsList\MobileApplicationsList.csproj", "{EC8DC2E2-9F6F-4FA2-8C76-F12C884A6C77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileApplicationListTest", "MobileApplicationListTest\MobileApplicationListTest.csproj", "{BAC6F68D-884C-43B1-94DA-0B8F2B02F9DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileApplicationListTest", "MobileApplicationListTest\MobileApplicationListTest.csproj", "{BAC6F68D-884C-43B1-94DA-0B8F2B02F9DA}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E76407A2-1B44-453B-995D-EFD5743B4889}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BAC6F68D-884C-43B1-94DA-0B8F2B02F9DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAC6F68D-884C-43B1-94DA-0B8F2B02F9DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAC6F68D-884C-43B1-94DA-0B8F2B02F9DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E76407A2-1B44-453B-995D-EFD5743B4889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E76407A2-1B44-453B-995D-EFD5743B4889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E76407A2-1B44-453B-995D-EFD5743B4889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E76407A2-1B44-453B-995D-EFD5743B4889}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

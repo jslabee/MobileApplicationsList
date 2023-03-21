@@ -1,0 +1,21 @@
+version: '3.4'
+
+volumes:
+  data:
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+     PGUSER: postgres
+     POSTGRES_USER: postgres
+     POSTGRES_PASSWORD: postgrespw
+     POSTGRES_DB: mobileapplicationdata
+    ports:
+      - 5432:5432
+
+  mobileapplicationslist:
+    image: ${DOCKER_REGISTRY-}mobileapplicationslist
+    build:
+      context: .
+      dockerfile: MobileApplicationsList/Dockerfile

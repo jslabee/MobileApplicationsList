@@ -16,12 +16,12 @@ namespace MobileApplicationsList.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.3")
+                .HasAnnotation("ProductVersion", "7.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("MobileApplicationsList.Model.DbModel.AplicationDetails", b =>
+            modelBuilder.Entity("MobileApplicationsList.repository.DbModel.AplicationDetails", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -58,7 +58,7 @@ namespace MobileApplicationsList.Migrations
                     b.ToTable("aplicationdetails");
                 });
 
-            modelBuilder.Entity("MobileApplicationsList.Model.DbModel.ApplicationBase", b =>
+            modelBuilder.Entity("MobileApplicationsList.repository.DbModel.ApplicationBase", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -79,14 +79,14 @@ namespace MobileApplicationsList.Migrations
                     b.ToTable("applicationbase");
                 });
 
-            modelBuilder.Entity("MobileApplicationsList.Model.DbModel.AplicationDetails", b =>
+            modelBuilder.Entity("MobileApplicationsList.repository.DbModel.AplicationDetails", b =>
                 {
-                    b.HasOne("MobileApplicationsList.Model.DbModel.ApplicationBase", null)
+                    b.HasOne("MobileApplicationsList.repository.DbModel.ApplicationBase", null)
                         .WithMany("platformSpecific")
                         .HasForeignKey("ApplicationBaseId");
                 });
 
-            modelBuilder.Entity("MobileApplicationsList.Model.DbModel.ApplicationBase", b =>
+            modelBuilder.Entity("MobileApplicationsList.repository.DbModel.ApplicationBase", b =>
                 {
                     b.Navigation("platformSpecific");
                 });
